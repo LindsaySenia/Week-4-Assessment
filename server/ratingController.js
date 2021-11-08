@@ -1,6 +1,4 @@
-const songs = {
-
-};
+const songs = [];
 let globalId = 1
 
 module.exports = {
@@ -35,7 +33,7 @@ module.exports = {
             songs[index].rating++
             res.status(200).send(songs)
         } else if (type === 'minus') {
-            movies[index].rating--
+            songs[index].rating--
             res.status(200).send(songs)
         } else {
             res.sendStatus(400)
