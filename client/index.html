@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body class="container">
+    <nav>
+      <ol>
+        <li class="crumb"><a href="./main.html">Home</a></li>
+        <li class="crumb"><a href="./home.html">Login</a></li>
+        <li class="crumb"><a href="./index.html">Random</a></li> 
+        <li class="crumb"><a href="./ranking.html">Rankings</a></li>
+      </ol>
+    </nav>
+    <br>
+    <br>
+    <section>
+    <button id="complimentButton">Get a compliment</button>
+    <br>
+    <img src="https://www.nicepng.com/png/detail/838-8385369_bad-fortune-cookie-cartoon.png" alt="Angry Anthropomorphized Cartoon Fortune Cookie">
+    <br>
+    <button id="fortuneButton">Get your fortune</button>
+    <br>
+    <br>
+
+    <button id="kanyeQuote">Get a Yeezy Quote</button>
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+      document.getElementById("fortuneButton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortune/")
+          .then(function(response) {
+            const data = response.data;
+            alert(data);
+          })
+      };
+      // document.getElementById("kanyeQuote").onclick = function () {
+      //   axios.get("https://api.kanye.rest/")
+      //     .then(function(response) {
+      //       const data = response.data;
+      //       alert(data);
+      //     })
+      // }
+    </script>
+  </body>
+</html>

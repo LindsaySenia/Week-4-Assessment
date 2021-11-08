@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <body class="container">
+        <nav>
+            <li class="crumb"><a href="./main.html">Home</a></li>
+            <li class="crumb"><a href="./home.html">Login</a></li>
+            <li class="crumb"><a href="./index.html">Random</a></li> 
+            <li class="crumb"><a href="./ranking.html">Rankings</a></li>
+        </nav>
+        <br>
+        <br>
+    <header>
+        <h1>Welcome!</h1>
+    </header>
+    <main>
+
+    <form id='login-form'>
+        <h2>Log In</h2>
+        <input 
+            type="text"
+            id="login-username"
+            placeholder="Username"/>
+        <input
+            type="password"
+            id='login-password'
+            placeholder='Password'/>
+        <button>Sign In</button>
+    </form>
+    <form id="register-form">
+        <h2>Register</h2>
+        <input
+            type='text'
+            id='register-username'
+            placeholder='Username'/>
+        <input
+            type='text'
+            id='register-email'
+            placeholder='Email'/>
+        <input
+            type='text'
+            id='register-firstName'
+            placeholder='First Name'/>
+        <input
+            type='text'
+            id='register-lastName'
+            placeholder='Register Last Name'/>
+        <input
+            type='text'
+            id='register-password'
+            placeholder='Password'/>
+        <input
+            type='text'
+            id='confirm-password'
+            placeholder='Confirm Password'/>
+        <button>Register</button>
+
+        <section id="user-info"></section>
+        
+        </form>
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="home.js"></script>
+
+</body>
+</html>

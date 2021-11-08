@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rankings</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body class="container">
+    <nav>
+        <ol>
+            <li class="crumb"><a href="./main.html">Home</a></li>
+            <li class="crumb"><a href="./home.html">Login</a></li>
+            <li class="crumb"><a href="./index.html">Random</a></li> 
+            <li class="crumb"><a href="./ranking.html">Rankings</a></li>
+        </ol>
+      </nav>
+      <br>
+      <br>
+      <main>
+        <form>
+            <input
+                type='text'
+                id='title'
+                placeholder="Song Title"/>
+            <input
+                type='text'
+                id='artist'
+                placeholder='Artist Name'/>
+            <section id='rating-container'>
+                <h3>Rate the Song:</h3>
+                <label for='Ratings'>(10 = Best)</label>
+
+                <select name='ratings' id='ratings'>
+                    <option value='10'>10</option>
+                    <option value='9'>9</option>
+                    <option value='8'>8</option>
+                    <option value='7'>7</option>
+                    <option value='6'>6</option>
+                    <option value='5'>5</option>
+                    <option value='4'>4</option>
+                    <option value='3'>3</option>
+                    <option value='2'>2</option>
+                    <option value='1'>1</option>
+                </select>
+            </section>
+            <button>Add Song</button>
+        </form>
+        <br>
+    <h3>Song Ratings:</h3>
+    <section id='song-ratings'></section>
+</main>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
